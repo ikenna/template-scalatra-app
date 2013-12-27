@@ -1,0 +1,4 @@
+<%@ val title: String = "Scalatra: a tiny, Sinatra-like web framework for Scala" %>
+<%@ val headline: String = "Welcome to Scalatra" %>
+
+<p>"Hello, Scalate! Hello World ssp xxxxxx!"</p>

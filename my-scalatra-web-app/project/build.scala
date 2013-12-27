@@ -7,10 +7,10 @@ import ScalateKeys._
 
 object MyScalatraWebAppBuild extends Build {
   val Organization = "net.ikenna"
-  val Name = "My Scalatra Web App"
+  val Name = "SampleScalatra"
   val Version = "0.1.0-SNAPSHOT"
   val ScalaVersion = "2.10.3"
-  val ScalatraVersion = "2.2.0"
+  val ScalatraVersion = "2.2.2"
 
   lazy val project = Project (
     "my-scalatra-web-app",
@@ -26,7 +26,7 @@ object MyScalatraWebAppBuild extends Build {
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
         "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
         "ch.qos.logback" % "logback-classic" % "1.0.6" % "runtime",
-        "org.eclipse.jetty" % "jetty-webapp" % "8.1.8.v20121106" % "container",
+        "org.eclipse.jetty" % "jetty-webapp" % "8.1.8.v20121106" % "container;compile",
         "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container;provided;test" artifacts (Artifact("javax.servlet", "jar", "jar"))
       ),
       scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
